@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Delicious+Handrawn&family=Poppins:wght@400;500;700;800&family=Quicksand:wght@400;500;600&family=Righteous&family=Ubuntu:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+body {
+    background-color: #e1f6ff;
+}
+img{
+    height: 10rem;
+    width: 10rem;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+img:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px;
+}
+.card {
+    display: flex;
+    background-color: #CACFD6;
+    column-gap: 10px;
+    overflow: hidden;
+    align-items: flex-start;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    border: 4px solid rgb(80, 80, 80);
+}
+.characterInfo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+.characterInfo h4 {
+    background-color: #424874;
+    color: #fff;
+} 
+.house{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    background-color: #A6B1E1;
+}
+.header{
+    background-image: url(got-image.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 180px;
+    position: sticky;
+    top:0;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 20px;
+    border-bottom: 10px solid #e1f6ff;
+}
+.header ul {
+    display: flex;
+    color: #fff;
+    list-style: none;
+    column-gap: 10px;
+    background-color: #424874;
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+.header ul li {
+    cursor: pointer;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+.header ul li:hover {
+    background-color: #fff;
+    color: #424874;
+    border-radius: 15px;
+}
+
+.search-box {
+    padding: 5px 15px;
+    width: 350px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+}
+.logo {
+    position: absolute;
+    text-align: center;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.logo h1 {
+    font-size: 4rem;
+}
+.logo p{
+    margin-top: -20px;
+}
+
+
+@media only screen and (max-width:830px){
+    .header{
+        flex-direction: column-reverse;
+        justify-content: end;
+        align-items: center;
+        row-gap: 5px;
+        background: #A6B1E1;
+        height: 100px;
+        padding: 0;
+        padding-bottom: 5px;
+    }
+    .logo {
+        position: absolute;
+        text-align: center;
+        bottom: 70%;
+        left: 50%;
+        color: #fff;
+        font-size: 0.8rem;
+    }
+    .logo h1 {
+        display: none;
+    }
+    .header ul li {
+        padding: 0 10px;
+        font-size: 0.5rem;
+    }
+    .search-box {
+        font-size: 0.5rem;
+        padding: 4px 15px;
+        width: 310px;
+    }
+}
+
+@media only screen and (max-width: 415px){
+    .search-box {
+        font-size: 0.4rem;
+        padding: 4px 15px;
+        width: 100%;
+    }
+    .header ul li {
+        padding: 0 5px;
+        font-size: 0.4rem;
+    }
+    .logo {
+        position: absolute;
+        text-align: center;
+        bottom: 60%;
+        left: 50%;
+        color: #fff;
+        font-size: 0.7rem;
+    }
+    img{
+        height: 5rem;
+        width: 5rem;
+        object-fit: cover;
+        transition: all 0.3s;
+    }
+    img:hover{
+        scale: 1.1;
+        cursor: pointer;
+    }
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 10px;
+    }
+    .characterInfo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+        height: 100%;
+    }
+    .characterInfo h4 {
+        background-color: #424874;
+        color: #fff;
+        font-size: 0.5rem;
+    } 
+    .characterInfo h5 {
+        font-size: 0.4rem;
+    }
+    .card {
+        border: 2px solid rgb(80, 80, 80);
+    }
+}
